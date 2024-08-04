@@ -19,8 +19,8 @@ public class RegisterRequest {
     private String firstname;
     @NotNull(message = "First name reqqqq")
     private String lastname;
-    @NotNull(message = "First name reqqqq")
-    @Email
+    @NotNull(message = "Email reqqqq")
+    @Email(message = "Not an Email")
     private String email;
     private String password;
 }

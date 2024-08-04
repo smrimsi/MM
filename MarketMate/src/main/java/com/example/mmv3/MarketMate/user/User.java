@@ -9,7 +9,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,30 +20,38 @@ import java.util.List;
 @Table(name = "_user")
 public class User implements UserDetails {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+
+//    @NotEmpty (message = "First name emm")
+//    @NotBlank(message = "First name blnk")
     private String firstname;
 
-
+//    @Nonnull @NotEmpty @NotBlank
     private String lastname;
 
-    @Column(nullable = true, unique = true)
+//    @Nonnull @NotEmpty @NotBlank @Email
     private String email;
 
-    @Column(nullable = true, unique = true)
-    private Integer Pin;
+//    @Nonnull @NotEmpty @NotBlank @Size(min = 4, max = 8)
+//    private Integer Pin;
 
-    @Column(nullable = true)
+//    @Nonnull @NotEmpty @NotBlank @Size(min = 4, max = 8)
     private String password;
 
     @Enumerated (EnumType.STRING)
     private Role role;
 
-    private LocalDateTime created_at;
+//    @Nonnull
+//    private LocalDateTime created_at;
 
-    private LocalDateTime updated_at;
+//    @Nonnull
+//    private LocalDateTime updated_at;
+
+
 
 
     @Override

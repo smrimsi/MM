@@ -1,6 +1,7 @@
 package com.example.mmv3.MarketMate.auth;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,10 @@ public class RegisterRequest {
 
     @NotNull(message = "First name reqqqq")
     private String firstname;
+    @NotNull(message = "First name reqqqq")
     private String lastname;
+    @NotNull(message = "First name reqqqq")
+    @Email
     private String email;
     private String password;
 }
